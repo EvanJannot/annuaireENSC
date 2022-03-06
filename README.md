@@ -93,21 +93,21 @@ Est_dans = (#idExp, #idSec);
 
 <p>Une fois que l’utilisateur a un compte, si ce dernier a été validé par le gestionnaire, il peut se connecter et accéder à la page d’accueil. Sur cette dernière, il peut visualiser l’ensemble des personnes de l’annuaire et trier selon différents critères les profils (compétences, secteurs, département) Depuis cette page, il peut cliquer sur le profil d’une personne de l’annuaire afin de le consulter ou depuis la barre de navigation, cliquer sur l’onglet “Mon profil” afin d’accéder à son propre profil.</p>
 
-<li>
-<ul>S’il a choisi de consulter le profil d’un autre utilisateur, il aura accès à ses informations publiques ainsi qu’à l’ensemble des expériences ayant été ajoutées par la personne. </ul>
-
-<ul>S’il a choisi de consulter son profil alors il peut consulter ses propres informations et peut choisir de les modifier. En plus de cela il peut s’il le désire ajouter ou supprimer une expérience.</ul>
-</li>
+<ul>
+<li>S’il a choisi de consulter le profil d’un autre utilisateur, il aura accès à ses informations publiques ainsi qu’à l’ensemble des expériences ayant été ajoutées par la personne. </li>
+	
+<li>S’il a choisi de consulter son profil alors il peut consulter ses propres informations et peut choisir de les modifier. En plus de cela il peut s’il le désire ajouter ou supprimer une expérience.</li>
+</ul>
 	
 <h3>Gestionnaire </h3>
 
 <p>Le gestionnaire passe par la même page de connexion qu’un utilisateur lambda. En se connectant, il arrive sur la même page d’accueil cependant, à la place de l’onglet mon profil dans la barre de navigation, il a accès à la liste des inscriptions à accepter.</p>
 
-<li>
-<ul>S’il choisit d’accéder à la liste des inscriptions à accepter, il visualise une liste sous la même forme que la page d’accueil avec la possibilité de cocher chaque personne à accepter ou de cocher l’ensemble des personnes à la fois afin de valider leur inscription. </ul>
-<ul>S’il choisit de consulter les informations d’un utilisateur, il verra l’ensemble de ses informations publiques.</ul>
-<ul>S’il choisit de créer un compte pour un élève, il se retrouvera sur la page de création de compte.</ul>
-</li>
+<ul>
+<li>S’il choisit d’accéder à la liste des inscriptions à accepter, il visualise une liste sous la même forme que la page d’accueil avec la possibilité de cocher chaque personne à accepter ou de cocher l’ensemble des personnes à la fois afin de valider leur inscription. </li>
+<li>S’il choisit de consulter les informations d’un utilisateur, il verra l’ensemble de ses informations publiques.</li>
+<li>S’il choisit de créer un compte pour un élève, il se retrouvera sur la page de création de compte.</li>
+</ul>
 
 <h2>Rôle des fichiers PHP </h2>
 
@@ -115,28 +115,28 @@ Est_dans = (#idExp, #idSec);
 
 <h3>Fichiers des pages web</h3>
 
-<li>
-<ul>accueil.php : Page comportant la liste des élèves inscrits dans l’annuaire. Elle comporte aussi la barre de recherche textuelle permettant de chercher une personne avec son nom et/ou son prénom. Il y a de plus des filtres permettant une recherche avancée avec les compétences, les secteurs et les départements. Une fois la recherche lancée avec des filtres, cela affiche la liste des élèves ayant des expériences correspondant aux filtres sélectionnés. Il y a aussi la liste des promotions, lorsque l’on clique sur l’une d'elles, on est redirigé vers la page promo.php. Pour qu’une promotion soit affichée, il faut que des élèves appartiennent à cette dernière.</ul>
-<ul>ajoutexperience.php : Cette page contient un formulaire permettant à l’élève d’ajouter une expérience. Une fois ajoutée, l’utilisateur est redirigé vers la page de son profil (profil.php).</ul>
-<ul>contact.php : Cette page contient une photo de notre binôme et nos coordonnées. Elle est accessible depuis la barre de navigation.</ul>
-<ul>gestion.php : Cette page est accessible par le gestionnaire et permet de valider l’inscription d’un ou plusieurs élèves à la fois.</ul>
-<ul>login.php : Page comprenant le formulaire de connexion afin d’accéder au site. Une fois connecté, l’utilisateur est redirigé vers la page d’accueil (accueil.php).</ul>
-<ul>logout.php : Page servant à détruire la session et à déconnecter l’utilisateur. Elle redirige vers la page login.php.</ul>
-<ul>modifprofil.php : Page avec le formulaire permettant à un élève connecté de modifier ses informations personnelles.</ul>
-<ul>profil.php  : Page permettant à un élève de consulter son profil, depuis son profil, il peut modifier ses informations personnelles (modifprofil.php) et ajouter une expérience (ajoutexperience.php). Cette page permet aussi de consulter le profil d’un autre élève de manière passive (impossible de modifier ses informations).</ul>
-<ul>register.php : Page comprenant le formulaire d’inscription pour un élève. Une fois l’inscription terminée, l’utilisateur est redirigé vers la page login.php.</ul>
-<ul>promo.php : Page comprenant l’ensemble des élèves appartenant à une promotion. La promotion est récupérée par l’URL grâce à l’id.</ul>
-</li>
+<ul>
+<li>accueil.php : Page comportant la liste des élèves inscrits dans l’annuaire. Elle comporte aussi la barre de recherche textuelle permettant de chercher une personne avec son nom et/ou son prénom. Il y a de plus des filtres permettant une recherche avancée avec les compétences, les secteurs et les départements. Une fois la recherche lancée avec des filtres, cela affiche la liste des élèves ayant des expériences correspondant aux filtres sélectionnés. Il y a aussi la liste des promotions, lorsque l’on clique sur l’une d'elles, on est redirigé vers la page promo.php. Pour qu’une promotion soit affichée, il faut que des élèves appartiennent à cette dernière.</li>
+<li>ajoutexperience.php : Cette page contient un formulaire permettant à l’élève d’ajouter une expérience. Une fois ajoutée, l’utilisateur est redirigé vers la page de son profil (profil.php).</li>
+<li>contact.php : Cette page contient une photo de notre binôme et nos coordonnées. Elle est accessible depuis la barre de navigation.</li>
+<li>gestion.php : Cette page est accessible par le gestionnaire et permet de valider l’inscription d’un ou plusieurs élèves à la fois.</li>
+<li>login.php : Page comprenant le formulaire de connexion afin d’accéder au site. Une fois connecté, l’utilisateur est redirigé vers la page d’accueil (accueil.php).</li>
+<li>logout.php : Page servant à détruire la session et à déconnecter l’utilisateur. Elle redirige vers la page login.php.</li>
+<li>modifprofil.php : Page avec le formulaire permettant à un élève connecté de modifier ses informations personnelles.</li>
+<li>profil.php  : Page permettant à un élève de consulter son profil, depuis son profil, il peut modifier ses informations personnelles (modifprofil.php) et ajouter une expérience (ajoutexperience.php). Cette page permet aussi de consulter le profil d’un autre élève de manière passive (impossible de modifier ses informations).</li>
+<li>register.php : Page comprenant le formulaire d’inscription pour un élève. Une fois l’inscription terminée, l’utilisateur est redirigé vers la page login.php.</li>
+<li>promo.php : Page comprenant l’ensemble des élèves appartenant à une promotion. La promotion est récupérée par l’URL grâce à l’id.</li>
+</ul>
 	
 <h3>Fichiers à inclure</h3>
 
-<li>
-<ul>footer.php : Ce fichier contient la barre noire située en bas des pages et est purement esthétique.</ul>
-<ul>functions.php : Ce fichier contient les fonctions PHP utilisées au sein des différentes pages web.</ul>
-<ul>head.php : Ce fichier contient l’ensemble des informations à fournir dans le head à savoir l’encodage, l’emplacement des librairies, du fichier CSS et le titre de la page.</ul>
-<ul>navbar.php : Ce fichier contient la barre de navigation utilisée dans toutes les pages web et qui évolue en fonction de l’état de l’utilisateur (connecté ou non) et en fonction du type de compte (élève ou gestionnaire). Elle permet de se déconnecter, d’accéder à la page contact.php, de retourner à l’accueil. Si l’utilisateur est un élève, il peut aussi accéder à son profil (profil.php) et si c’est un gestionnaire il peut inscrire un élève (register.php) et consulter les demandes de validation (gestion.php).</ul>
-<ul>scripts.php : Ce fichier contient les scripts à placer en fin de fichier PHP afin de rendre la navigation au sein des pages web fluide.</ul>
-</li>
+<ul>
+<li>footer.php : Ce fichier contient la barre noire située en bas des pages et est purement esthétique.</li>
+<li>functions.php : Ce fichier contient les fonctions PHP utilisées au sein des différentes pages web.</li>
+<li>head.php : Ce fichier contient l’ensemble des informations à fournir dans le head à savoir l’encodage, l’emplacement des librairies, du fichier CSS et le titre de la page.</li>
+<li>navbar.php : Ce fichier contient la barre de navigation utilisée dans toutes les pages web et qui évolue en fonction de l’état de l’utilisateur (connecté ou non) et en fonction du type de compte (élève ou gestionnaire). Elle permet de se déconnecter, d’accéder à la page contact.php, de retourner à l’accueil. Si l’utilisateur est un élève, il peut aussi accéder à son profil (profil.php) et si c’est un gestionnaire il peut inscrire un élève (register.php) et consulter les demandes de validation (gestion.php).</li>
+<li>scripts.php : Ce fichier contient les scripts à placer en fin de fichier PHP afin de rendre la navigation au sein des pages web fluide.</li>
+</ul>
 
 <h2>Visualisation des écrans web finaux</h2>
 
@@ -146,39 +146,39 @@ Est_dans = (#idExp, #idSec);
 
 <p>Afin de vérifier le bon fonctionnement de notre site, nous avons mis en œuvre une série de tests permettant de valider le bon fonctionnement de l’ensemble des fonctionnalités présentes sur ce dernier.</p>
 
-<li>
-<ul>Test 1 : 
-  Un élève doit s’inscrire et créer son compte. Il est en attente de validation.</ul>
+<ul>
+<li>Test 1 : 
+  Un élève doit s’inscrire et créer son compte. Il est en attente de validation.</li>
 
-<ul>Test 2 :
-  Un gestionnaire se connecte.</ul>
+<li>Test 2 :
+  Un gestionnaire se connecte.</li>
 
-<ul>Test 3 :
-  Un gestionnaire valide un compte en attente.</ul>
+<li>Test 3 :
+  Un gestionnaire valide un compte en attente.</li>
 
-<ul>Test 4 :
-  Un gestionnaire inscrit un élève.</ul>
+<li>Test 4 :
+  Un gestionnaire inscrit un élève.</li>
 
-  <ul>Test 5 :
-    Un élève dont le compte est validé se connecte.</ul>
+  <li>Test 5 :
+    Un élève dont le compte est validé se connecte.</li>
 
-<ul>Test 6 :
-  Un élève connecté consulte le profil d’un autre élève.</ul>
+<li>Test 6 :
+  Un élève connecté consulte le profil d’un autre élève.</li>
 
-<ul>Test 7 :
-  Un élève modifie es informations personnelles.</ul>
+<li>Test 7 :
+  Un élève modifie es informations personnelles.</li>
 
-  <ul>Test 8 :
-    Un élève ajoute une expérience.</ul>
+  <li>Test 8 :
+    Un élève ajoute une expérience.</li>
 
-<ul>Test 9 :
-  Un utilisateur effectue une recherche textuelle.</ul>
+<li>Test 9 :
+  Un utilisateur effectue une recherche textuelle.</li>
 
-<ul>Test 10 :
-  Un utilisateur effectue une recherche par filtres.</ul>
+<li>Test 10 :
+  Un utilisateur effectue une recherche par filtres.</li>
 
-<ul>Test 11 :
-Un utilisateur sélectionne une promotion afin de visualiser les élèves appartenant à cette dernière.</ul>
+<li>Test 11 :
+Un utilisateur sélectionne une promotion afin de visualiser les élèves appartenant à cette dernière.</li>
 
 <h1>Conclusion</h1>
 
