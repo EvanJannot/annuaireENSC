@@ -21,179 +21,36 @@
 <h2>Hypothèses pour le MCD et MCD</h2> 
 
 
-À l’aide de l’énoncé, nous avons émis différentes hypothèses qui nous ont permis de définir les tables à créer ainsi que les liens entre ces dernières.
+<p>À l’aide de l’énoncé, nous avons émis différentes hypothèses qui nous ont permis de définir les tables à créer ainsi que les liens entre ces dernières.</p>
 
 
-* Tout d’abord nous avons défini les tables “Elève” et “Gestionnaire” qui correspondent aux deux types d’utilisateurs qui seront présents sur notre annuaire. Ces dernières sont composées des informations personnelles qui définissent les utilisateurs et d’un login et d’un mot de passe. Le lien est de type 1,1 d'élève vers Gestionnaire et 1,n de Gestionnaire vers Elève. En effet, un élève est accepté par un et un seul gestionnaire tandis qu’un gestionnaire accepte 1 à n élèves.
+<li>
+<ul>Tout d’abord nous avons défini les tables “Elève” et “Gestionnaire” qui correspondent aux deux types d’utilisateurs qui seront présents sur notre annuaire. Ces dernières sont composées des informations personnelles qui définissent les utilisateurs et d’un login et d’un mot de passe. Le lien est de type 1,1 d'élève vers Gestionnaire et 1,n de Gestionnaire vers Elève. En effet, un élève est accepté par un et un seul gestionnaire tandis qu’un gestionnaire accepte 1 à n élèves.</ul>
 
-
-* Ensuite nous avons défini la table “Expérience”. Celle-ci contient certaines informations nécessaires afin de définir une expérience. Le lien avec Élève est de 0,n dans le sens Elève/Expérience, car un élève peut ne pas avoir d’expérience ou en avoir n et est de 1,1 dans le sens Expérience/Élève car une expérience est associée à un et un seul élève.
-
-
-Certaines informations comme l’organisme, le ou les secteurs et la ou les compétences ont été placées dans des tables à part. 
-* La table Organisme comporte toutes les informations sur un organisme, son nom, le type d’organisme, l’adresse et le département. Mettre ces informations dans la table Expérience aurait surchargé cette dernière. Le lien est de 0,n dans le sens Organisme/Expérience, car un organisme peut être associé à aucune expérience comme à n expériences et il est de 1,1 dans le sens opposé, car une expérience est liée à un seul et unique organisme.
-
-
-* La table Secteur a été séparée de la table Expérience après que nous ayons émis l’hypothèse qu’une expérience pouvait appartenir à plusieurs secteurs. Ainsi, puisque le nombre de secteurs est indéfini et peut être élevé, nous avons décidé de séparer les deux tables pour que l’organisation soit plus claire. Ainsi le lien entre Expérience et Secteur est de 1,n dans le sens Expérience/Secteur, car une expérience peut appartenir à un secteur comme à n et est de 0,n dans l’autre sens, car un secteur peut n’appartenir à aucune expérience comme à n.
-
-
-* La table Compétences a été séparée pour les mêmes raisons que la table Secteur. Nous retrouvons donc les mêmes liens entre les deux tables.
-
-
-Ainsi nous obtenons le MCD suivant :  
-figure 4 - MCD
-
-
-Dictionnaire des données
-
-
-Voici le dictionnaire de données issue de notre MCD :
-
-
-Nom
-	Description
-	Type
-	Taille
-	Elève
-	id (Elève)
-	id de l’élève
-	int
-	Dépend du nombre d’élèves inscrits
-	nom (Elève)
-	nom de l’élève
-	string
-	20
-	prenom (Elève)
-	prénom de l’élève
-	string
-	20
-	promotion
-	année de promotion de l’élève
-	int
-	4
-	adresseP
-	adresse postale de l’élève
-	string
-	50
-	adresseE
-	adresse électronique de l’élève
-	string
-	30
-	telephone
-	numéro de téléphone de l’élève
-	int
-	10
-	sexe
-	sexe de l’élève
-	string
-	15
-	validation
-	statut du compte de l’élève
-	booléen
+<ul>Ensuite nous avons défini la table “Expérience”. Celle-ci contient certaines informations nécessaires afin de définir une expérience. Le lien avec Élève est de 0,n dans le sens Elève/Expérience, car un élève peut ne pas avoir d’expérience ou en avoir n et est de 1,1 dans le sens Expérience/Élève car une expérience est associée à un et un seul élève.</ul> 
 	
-
-	age
-	âge de l’élève
-	int
-	2
-	Gestionnaire
-	login (Gestionnaire)
-	identifiant de connexion du gestionnaire
-	string
-	20
-	mdp (Gestionnaire)
-	mot de passe du gestionnaire
-	string
-	20
-	id (Gestionnaire)
-	id du gestionnaire
-	int
-	1
-	nom (Gestionnaire)
-	nom du gestionnaire
-	string
-	20
-	prenom (Gestionnaire)
-	prénom du gestionnaire
-	string
-	20
-	Expérience
-	idExp
-	id de l’expérience professionnelle
-	int
-	2
-	ddd
-	date de début de l’expérience professionnelle
-	date
+<p>Certaines informations comme l’organisme, le ou les secteurs et la ou les compétences ont été placées dans des tables à part.</p>
 	
+<ul>La table Organisme comporte toutes les informations sur un organisme, son nom, le type d’organisme, l’adresse et le département. Mettre ces informations dans la table Expérience aurait surchargé cette dernière. Le lien est de 0,n dans le sens Organisme/Expérience, car un organisme peut être associé à aucune expérience comme à n expériences et il est de 1,1 dans le sens opposé, car une expérience est liée à un seul et unique organisme.</ul>
 
-	ddf
-	date de fin de l’expérience professionnelle
-	date
+<ul>La table Secteur a été séparée de la table Expérience après que nous ayons émis l’hypothèse qu’une expérience pouvait appartenir à plusieurs secteurs. Ainsi, puisque le nombre de secteurs est indéfini et peut être élevé, nous avons décidé de séparer les deux tables pour que l’organisation soit plus claire. Ainsi le lien entre Expérience et Secteur est de 1,n dans le sens Expérience/Secteur, car une expérience peut appartenir à un secteur comme à n et est de 0,n dans l’autre sens, car un secteur peut n’appartenir à aucune expérience comme à n.</ul>
+
+<ul>La table Compétences a été séparée pour les mêmes raisons que la table Secteur. Nous retrouvons donc les mêmes liens entre les deux tables.</ul>	
 	
-
-	type (Expérence)
-	type d’expérience
-	string
-	20
-	description
-	description courte de l’expérience professionnelle
-	string
-	400
-	salaire
-	salaire obtenu
-	string
-	20
-	Organisme
-	idOrg
-	id de l’organisme
-	int
-	2
-	type_
-	type d’organisme 
-	string
-	20
-	adresse
-	adresse de l’organisme
-	string
-	40
-	nom (Organisme)
-	nom de l’organisme
-	string
-	25
-	departement
-	région de l’organisme
-	string
-	20
-	Secteur
-	idSec
-	id du secteur
-	int
-	2
-	nom (Secteur)
-	nom du secteur
-	string
-	20
-	Compétences
-	idCom
-	id de la compétence
-	int
-	2
-	nom (Compétence)
-	nom de la compétence
-	string
-	20
-	
-
-figure 5 - Dictionnaire des données issue du MCD
+</li>
 
 
+<p>Ainsi nous obtenons le MCD suivant :  </p>
 
+<h2>Dictionnaire des données</h2>
 
-Schéma relationnel
-Voici le schéma relationnel (MLD) obtenu à partir du MCD :
+<p>Voici le dictionnaire de données issue de notre MCD :</p>
 
+<h2>Schéma relationnel</h2>
 
+<p>Voici le schéma relationnel (MLD) obtenu à partir du MCD :</p>
+
+```
 Gestionnaire = (id COUNTER, nom VARCHAR(50), prenom VARCHAR(50), login VARCHAR(50), mdp VARCHAR(50));
 
 
@@ -216,80 +73,74 @@ Porte_sur = (#idExp, #idCom);
 
 
 Est_dans = (#idExp, #idSec);
-Maquette des écrans
-        Les maquettes des différents écrans ont été réalisées à l’aide du logiciel Adobe XD et du pack WireFrame disponible gratuitement. Des changements ont été apportés au cours de la programmation du site web que ce soit dans l’apparence et la disposition des éléments. Cependant, une majeure partie des éléments est restée identique. Les maquettes se trouvent en annexes (voir annexe 1 à 7).
+```
 
+<h2>Maquette des écrans</h2>
 
+<p>Les maquettes des différents écrans ont été réalisées à l’aide du logiciel Adobe XD et du pack WireFrame disponible gratuitement. Des changements ont été apportés au cours de la programmation du site web que ce soit dans l’apparence et la disposition des éléments. Cependant, une majeure partie des éléments est restée identique. Les maquettes se trouvent en annexes (voir annexe 1 à 7).</p>
 
+<h1>Site web</h1>
 
-Site web
-Arborescence du projet  
-figure 6 - Arborescence du site web
-Justification de l’organisation du site
+<h2>Arborescence du projet</h2>
 
+<h2>Justification de l’organisation du site</h2>
 
-        Le site est pensé pour deux types d’utilisateurs, les utilisateurs lambdas qui sont les élèves et les gestionnaires. En fonction du type de comptes, l’accès aux pages web sera différent. Cependant, la première page est la même pour tous les utilisateurs. C’est celle de connexion.
-Utilisateur lambda 
-        Lorsqu’un utilisateur arrive sur le site, la première page à laquelle il accède est celle de connexion. En effet, un utilisateur non connecté ne doit pas avoir accès à l’annuaire de l’ENSC. Sur cette page de connexion, il est possible de s’inscrire et d’accéder à une page d’inscription. Une fois l’inscription finalisée, l’utilisateur est redirigé vers la page de connexion.
-figure 7 - Schéma des scénarios possibles pour un élève lors de l’arrivée sur le site  
+<p>Le site est pensé pour deux types d’utilisateurs, les utilisateurs lambdas qui sont les élèves et les gestionnaires. En fonction du type de comptes, l’accès aux pages web sera différent. Cependant, la première page est la même pour tous les utilisateurs. C’est celle de connexion.</p>
 
+<h3>Utilisateur lambda </h3>
 
-        Une fois que l’utilisateur a un compte, si ce dernier a été validé par le gestionnaire, il peut se connecter et accéder à la page d’accueil. Sur cette dernière, il peut visualiser l’ensemble des personnes de l’annuaire et trier selon différents critères les profils (compétences, secteurs, département) Depuis cette page, il peut cliquer sur le profil d’une personne de l’annuaire afin de le consulter ou depuis la barre de navigation, cliquer sur l’onglet “Mon profil” afin d’accéder à son propre profil.
+<p>Lorsqu’un utilisateur arrive sur le site, la première page à laquelle il accède est celle de connexion. En effet, un utilisateur non connecté ne doit pas avoir accès à l’annuaire de l’ENSC. Sur cette page de connexion, il est possible de s’inscrire et d’accéder à une page d’inscription. Une fois l’inscription finalisée, l’utilisateur est redirigé vers la page de connexion.</p>
 
+<p>Une fois que l’utilisateur a un compte, si ce dernier a été validé par le gestionnaire, il peut se connecter et accéder à la page d’accueil. Sur cette dernière, il peut visualiser l’ensemble des personnes de l’annuaire et trier selon différents critères les profils (compétences, secteurs, département) Depuis cette page, il peut cliquer sur le profil d’une personne de l’annuaire afin de le consulter ou depuis la barre de navigation, cliquer sur l’onglet “Mon profil” afin d’accéder à son propre profil.</p>
 
-* S’il a choisi de consulter le profil d’un autre utilisateur, il aura accès à ses informations publiques ainsi qu’à l’ensemble des expériences ayant été ajoutées par la personne. 
+<li>
+<ul>S’il a choisi de consulter le profil d’un autre utilisateur, il aura accès à ses informations publiques ainsi qu’à l’ensemble des expériences ayant été ajoutées par la personne. </ul>
 
+<ul>S’il a choisi de consulter son profil alors il peut consulter ses propres informations et peut choisir de les modifier. En plus de cela il peut s’il le désire ajouter ou supprimer une expérience.</ul>
+</li>
+	
+<h3>Gestionnaire </h3>
 
-* S’il a choisi de consulter son profil alors il peut consulter ses propres informations et peut choisir de les modifier. En plus de cela il peut s’il le désire ajouter ou supprimer une expérience.
-        figure 8 - Schéma des scénarios possibles pour un élève  
-Gestionnaire 
+<p>Le gestionnaire passe par la même page de connexion qu’un utilisateur lambda. En se connectant, il arrive sur la même page d’accueil cependant, à la place de l’onglet mon profil dans la barre de navigation, il a accès à la liste des inscriptions à accepter.</p>
 
+<li>
+<ul>S’il choisit d’accéder à la liste des inscriptions à accepter, il visualise une liste sous la même forme que la page d’accueil avec la possibilité de cocher chaque personne à accepter ou de cocher l’ensemble des personnes à la fois afin de valider leur inscription. </ul>
+<ul>S’il choisit de consulter les informations d’un utilisateur, il verra l’ensemble de ses informations publiques.</ul>
+<ul>S’il choisit de créer un compte pour un élève, il se retrouvera sur la page de création de compte.</ul>
+</li>
 
-        Le gestionnaire passe par la même page de connexion qu’un utilisateur lambda. En se connectant, il arrive sur la même page d’accueil cependant, à la place de l’onglet mon profil dans la barre de navigation, il a accès à la liste des inscriptions à accepter.
+<h2>Rôle des fichiers PHP </h2>
 
+<p>Nous pouvons distinguer deux catégories de fichiers PHP : les fichiers des pages web et les fichiers à inclure au sein des pages web afin d’éviter la duplication de code.</p>
 
-* S’il choisit d’accéder à la liste des inscriptions à accepter, il visualise une liste sous la même forme que la page d’accueil avec la possibilité de cocher chaque personne à accepter ou de cocher l’ensemble des personnes à la fois afin de valider leur inscription. 
-* S’il choisit de consulter les informations d’un utilisateur, il verra l’ensemble de ses informations publiques.
-* S’il choisit de créer un compte pour un élève, il se retrouvera sur la page de création de compte.
+<h3>Fichiers des pages web</h3>
 
+<li>
+<ul>accueil.php : Page comportant la liste des élèves inscrits dans l’annuaire. Elle comporte aussi la barre de recherche textuelle permettant de chercher une personne avec son nom et/ou son prénom. Il y a de plus des filtres permettant une recherche avancée avec les compétences, les secteurs et les départements. Une fois la recherche lancée avec des filtres, cela affiche la liste des élèves ayant des expériences correspondant aux filtres sélectionnés. Il y a aussi la liste des promotions, lorsque l’on clique sur l’une d'elles, on est redirigé vers la page promo.php. Pour qu’une promotion soit affichée, il faut que des élèves appartiennent à cette dernière.</ul>
+<ul>ajoutexperience.php : Cette page contient un formulaire permettant à l’élève d’ajouter une expérience. Une fois ajoutée, l’utilisateur est redirigé vers la page de son profil (profil.php).</ul>
+<ul>contact.php : Cette page contient une photo de notre binôme et nos coordonnées. Elle est accessible depuis la barre de navigation.</ul>
+<ul>gestion.php : Cette page est accessible par le gestionnaire et permet de valider l’inscription d’un ou plusieurs élèves à la fois.</ul>
+<ul>login.php : Page comprenant le formulaire de connexion afin d’accéder au site. Une fois connecté, l’utilisateur est redirigé vers la page d’accueil (accueil.php).</ul>
+<ul>logout.php : Page servant à détruire la session et à déconnecter l’utilisateur. Elle redirige vers la page login.php.</ul>
+<ul>modifprofil.php : Page avec le formulaire permettant à un élève connecté de modifier ses informations personnelles.</ul>
+<ul>profil.php  : Page permettant à un élève de consulter son profil, depuis son profil, il peut modifier ses informations personnelles (modifprofil.php) et ajouter une expérience (ajoutexperience.php). Cette page permet aussi de consulter le profil d’un autre élève de manière passive (impossible de modifier ses informations).</ul>
+<ul>register.php : Page comprenant le formulaire d’inscription pour un élève. Une fois l’inscription terminée, l’utilisateur est redirigé vers la page login.php.</ul>
+<ul>promo.php : Page comprenant l’ensemble des élèves appartenant à une promotion. La promotion est récupérée par l’URL grâce à l’id.</ul>
+</li>
+	
+<h3>Fichiers à inclure</h3>
 
-
-
-figure 9 - Schéma des scénarios possibles pour un gestionnaire  
-
-
-Rôle des fichiers PHP 
-
-
-        Nous pouvons distinguer deux catégories de fichiers PHP : les fichiers des pages web et les fichiers à inclure au sein des pages web afin d’éviter la duplication de code.
-Fichiers des pages web
-* accueil.php : Page comportant la liste des élèves inscrits dans l’annuaire. Elle comporte aussi la barre de recherche textuelle permettant de chercher une personne avec son nom et/ou son prénom. Il y a de plus des filtres permettant une recherche avancée avec les compétences, les secteurs et les départements. Une fois la recherche lancée avec des filtres, cela affiche la liste des élèves ayant des expériences correspondant aux filtres sélectionnés. Il y a aussi la liste des promotions, lorsque l’on clique sur l’une d'elles, on est redirigé vers la page promo.php. Pour qu’une promotion soit affichée, il faut que des élèves appartiennent à cette dernière.
-* ajoutexperience.php : Cette page contient un formulaire permettant à l’élève d’ajouter une expérience. Une fois ajoutée, l’utilisateur est redirigé vers la page de son profil (profil.php).
-* contact.php : Cette page contient une photo de notre binôme et nos coordonnées. Elle est accessible depuis la barre de navigation.
-* gestion.php : Cette page est accessible par le gestionnaire et permet de valider l’inscription d’un ou plusieurs élèves à la fois.
-* login.php : Page comprenant le formulaire de connexion afin d’accéder au site. Une fois connecté, l’utilisateur est redirigé vers la page d’accueil (accueil.php).
-* logout.php : Page servant à détruire la session et à déconnecter l’utilisateur. Elle redirige vers la page login.php.
-* modifprofil.php : Page avec le formulaire permettant à un élève connecté de modifier ses informations personnelles.
-* profil.php  : Page permettant à un élève de consulter son profil, depuis son profil, il peut modifier ses informations personnelles (modifprofil.php) et ajouter une expérience (ajoutexperience.php). Cette page permet aussi de consulter le profil d’un autre élève de manière passive (impossible de modifier ses informations).
-* register.php : Page comprenant le formulaire d’inscription pour un élève. Une fois l’inscription terminée, l’utilisateur est redirigé vers la page login.php.
-* promo.php : Page comprenant l’ensemble des élèves appartenant à une promotion. La promotion est récupérée par l’URL grâce à l’id.
-
-
-Fichiers à inclure
-
-
-* footer.php : Ce fichier contient la barre noire située en bas des pages et est purement esthétique.
-* functions.php : Ce fichier contient les fonctions PHP utilisées au sein des différentes pages web.
-* head.php : Ce fichier contient l’ensemble des informations à fournir dans le head à savoir l’encodage, l’emplacement des librairies, du fichier CSS et le titre de la page.
-* navbar.php : Ce fichier contient la barre de navigation utilisée dans toutes les pages web et qui évolue en fonction de l’état de l’utilisateur (connecté ou non) et en fonction du type de compte (élève ou gestionnaire). Elle permet de se déconnecter, d’accéder à la page contact.php, de retourner à l’accueil. Si l’utilisateur est un élève, il peut aussi accéder à son profil (profil.php) et si c’est un gestionnaire il peut inscrire un élève (register.php) et consulter les demandes de validation (gestion.php).
-* scripts.php : Ce fichier contient les scripts à placer en fin de fichier PHP afin de rendre la navigation au sein des pages web fluide.
-
+<li>
+<ul>footer.php : Ce fichier contient la barre noire située en bas des pages et est purement esthétique.</ul>
+<ul>functions.php : Ce fichier contient les fonctions PHP utilisées au sein des différentes pages web.</ul>
+<ul>head.php : Ce fichier contient l’ensemble des informations à fournir dans le head à savoir l’encodage, l’emplacement des librairies, du fichier CSS et le titre de la page.</ul>
+<ul>navbar.php : Ce fichier contient la barre de navigation utilisée dans toutes les pages web et qui évolue en fonction de l’état de l’utilisateur (connecté ou non) et en fonction du type de compte (élève ou gestionnaire). Elle permet de se déconnecter, d’accéder à la page contact.php, de retourner à l’accueil. Si l’utilisateur est un élève, il peut aussi accéder à son profil (profil.php) et si c’est un gestionnaire il peut inscrire un élève (register.php) et consulter les demandes de validation (gestion.php).</ul>
+<ul>scripts.php : Ce fichier contient les scripts à placer en fin de fichier PHP afin de rendre la navigation au sein des pages web fluide.</ul>
+</li>
 
 <h2>Visualisation des écrans web finaux</h2>
 
-
 <p>L’ensemble des écrans web sont disponibles en annexe (annexe 8 à 17) et permettent de visualiser à quoi ressemble notre version définitive du site.</p>
-
 
 <h1>Plan de tests</h1>
 
