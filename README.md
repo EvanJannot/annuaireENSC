@@ -94,14 +94,14 @@ Est_dans = (#idExp, #idSec);
 
 <h2>Maquette des écrans</h2>
 
-<p>Les maquettes des différents écrans ont été réalisées à l’aide du logiciel Adobe XD et du pack WireFrame disponible gratuitement. Des changements ont été apportés au cours de la programmation du site web que ce soit dans l’apparence et la disposition des éléments. Cependant, une majeure partie des éléments est restée identique. Les maquettes se trouvent en annexes (voir annexe 1 à 7).</p>
+<p>Les maquettes des différents écrans ont été réalisées à l’aide du logiciel Adobe XD et du pack WireFrame disponible gratuitement. Des changements ont été apportés au cours de la programmation du site web que ce soit dans l’apparence et la disposition des éléments. Cependant, une majeure partie des éléments est restée identique.</p>
 
 <h1>Site web</h1>
 
 <h2>Arborescence du projet</h2>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/79797037/156945398-6d94be7e-8502-4056-83f8-b6c77cb7cb55.png">
+  <img src="https://user-images.githubusercontent.com/79797037/156945549-b07e8b41-22cf-48e6-9ab5-7baf4daa9ca5.png">
 </p>
 
 <h2>Justification de l’organisation du site</h2>
@@ -170,10 +170,6 @@ Est_dans = (#idExp, #idSec);
 <li>navbar.php : Ce fichier contient la barre de navigation utilisée dans toutes les pages web et qui évolue en fonction de l’état de l’utilisateur (connecté ou non) et en fonction du type de compte (élève ou gestionnaire). Elle permet de se déconnecter, d’accéder à la page contact.php, de retourner à l’accueil. Si l’utilisateur est un élève, il peut aussi accéder à son profil (profil.php) et si c’est un gestionnaire il peut inscrire un élève (register.php) et consulter les demandes de validation (gestion.php).</li>
 <li>scripts.php : Ce fichier contient les scripts à placer en fin de fichier PHP afin de rendre la navigation au sein des pages web fluide.</li>
 </ul>
-
-<h2>Visualisation des écrans web finaux</h2>
-
-<p>L’ensemble des écrans web sont disponibles en annexe (annexe 8 à 17) et permettent de visualiser à quoi ressemble notre version définitive du site.</p>
 
 <h1>Plan de tests</h1>
 
