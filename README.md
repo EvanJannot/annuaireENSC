@@ -31,9 +31,7 @@
 
 <h2>Hypothèses pour le MCD et MCD</h2> 
 
-
 <p>À l’aide de l’énoncé, nous avons émis différentes hypothèses qui nous ont permis de définir les tables à créer ainsi que les liens entre ces dernières.</p>
-
 
 <ul>
 <li>Tout d’abord nous avons défini les tables “Elève” et “Gestionnaire” qui correspondent aux deux types d’utilisateurs qui seront présents sur notre annuaire. Ces dernières sont composées des informations personnelles qui définissent les utilisateurs et d’un login et d’un mot de passe. Le lien est de type 1,1 d'élève vers Gestionnaire et 1,n de Gestionnaire vers Elève. En effet, un élève est accepté par un et un seul gestionnaire tandis qu’un gestionnaire accepte 1 à n élèves.</li>
@@ -50,12 +48,20 @@
 	
 </ul>
 
-
 <p>Ainsi nous obtenons le MCD suivant :  </p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/79797037/156945180-fd57fd11-f89d-4191-9bc0-7b8137605df9.PNG">
+</p>
 
 <h2>Dictionnaire des données</h2>
 
 <p>Voici le dictionnaire de données issue de notre MCD :</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/79797037/156945265-b4db3fb8-851d-4db6-a3fd-34079c2a6016.PNG">
+  <img src="https://user-images.githubusercontent.com/79797037/156945310-b94b8593-b7b6-4430-8585-2c06ddc75804.PNG">
+</p>
 
 <h2>Schéma relationnel</h2>
 
