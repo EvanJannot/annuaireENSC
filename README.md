@@ -24,20 +24,20 @@
 <p>À l’aide de l’énoncé, nous avons émis différentes hypothèses qui nous ont permis de définir les tables à créer ainsi que les liens entre ces dernières.</p>
 
 
-<li>
-<ul>Tout d’abord nous avons défini les tables “Elève” et “Gestionnaire” qui correspondent aux deux types d’utilisateurs qui seront présents sur notre annuaire. Ces dernières sont composées des informations personnelles qui définissent les utilisateurs et d’un login et d’un mot de passe. Le lien est de type 1,1 d'élève vers Gestionnaire et 1,n de Gestionnaire vers Elève. En effet, un élève est accepté par un et un seul gestionnaire tandis qu’un gestionnaire accepte 1 à n élèves.</ul>
+<ul>
+<li>Tout d’abord nous avons défini les tables “Elève” et “Gestionnaire” qui correspondent aux deux types d’utilisateurs qui seront présents sur notre annuaire. Ces dernières sont composées des informations personnelles qui définissent les utilisateurs et d’un login et d’un mot de passe. Le lien est de type 1,1 d'élève vers Gestionnaire et 1,n de Gestionnaire vers Elève. En effet, un élève est accepté par un et un seul gestionnaire tandis qu’un gestionnaire accepte 1 à n élèves.</li>
 
-<ul>Ensuite nous avons défini la table “Expérience”. Celle-ci contient certaines informations nécessaires afin de définir une expérience. Le lien avec Élève est de 0,n dans le sens Elève/Expérience, car un élève peut ne pas avoir d’expérience ou en avoir n et est de 1,1 dans le sens Expérience/Élève car une expérience est associée à un et un seul élève.</ul> 
+<li>Ensuite nous avons défini la table “Expérience”. Celle-ci contient certaines informations nécessaires afin de définir une expérience. Le lien avec Élève est de 0,n dans le sens Elève/Expérience, car un élève peut ne pas avoir d’expérience ou en avoir n et est de 1,1 dans le sens Expérience/Élève car une expérience est associée à un et un seul élève.</li> 
 	
 <p>Certaines informations comme l’organisme, le ou les secteurs et la ou les compétences ont été placées dans des tables à part.</p>
 	
-<ul>La table Organisme comporte toutes les informations sur un organisme, son nom, le type d’organisme, l’adresse et le département. Mettre ces informations dans la table Expérience aurait surchargé cette dernière. Le lien est de 0,n dans le sens Organisme/Expérience, car un organisme peut être associé à aucune expérience comme à n expériences et il est de 1,1 dans le sens opposé, car une expérience est liée à un seul et unique organisme.</ul>
+<li>La table Organisme comporte toutes les informations sur un organisme, son nom, le type d’organisme, l’adresse et le département. Mettre ces informations dans la table Expérience aurait surchargé cette dernière. Le lien est de 0,n dans le sens Organisme/Expérience, car un organisme peut être associé à aucune expérience comme à n expériences et il est de 1,1 dans le sens opposé, car une expérience est liée à un seul et unique organisme.</li>
 
-<ul>La table Secteur a été séparée de la table Expérience après que nous ayons émis l’hypothèse qu’une expérience pouvait appartenir à plusieurs secteurs. Ainsi, puisque le nombre de secteurs est indéfini et peut être élevé, nous avons décidé de séparer les deux tables pour que l’organisation soit plus claire. Ainsi le lien entre Expérience et Secteur est de 1,n dans le sens Expérience/Secteur, car une expérience peut appartenir à un secteur comme à n et est de 0,n dans l’autre sens, car un secteur peut n’appartenir à aucune expérience comme à n.</ul>
+<li>La table Secteur a été séparée de la table Expérience après que nous ayons émis l’hypothèse qu’une expérience pouvait appartenir à plusieurs secteurs. Ainsi, puisque le nombre de secteurs est indéfini et peut être élevé, nous avons décidé de séparer les deux tables pour que l’organisation soit plus claire. Ainsi le lien entre Expérience et Secteur est de 1,n dans le sens Expérience/Secteur, car une expérience peut appartenir à un secteur comme à n et est de 0,n dans l’autre sens, car un secteur peut n’appartenir à aucune expérience comme à n.</li>
 
-<ul>La table Compétences a été séparée pour les mêmes raisons que la table Secteur. Nous retrouvons donc les mêmes liens entre les deux tables.</ul>	
+<li>La table Compétences a été séparée pour les mêmes raisons que la table Secteur. Nous retrouvons donc les mêmes liens entre les deux tables.</li>	
 	
-</li>
+</ul>
 
 
 <p>Ainsi nous obtenons le MCD suivant :  </p>
