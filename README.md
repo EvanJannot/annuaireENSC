@@ -100,11 +100,19 @@ Est_dans = (#idExp, #idSec);
 
 <h2>Arborescence du projet</h2>
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/79797037/156945398-6d94be7e-8502-4056-83f8-b6c77cb7cb55.png">
+</p>
+
 <h2>Justification de l’organisation du site</h2>
 
 <p>Le site est pensé pour deux types d’utilisateurs, les utilisateurs lambdas qui sont les élèves et les gestionnaires. En fonction du type de comptes, l’accès aux pages web sera différent. Cependant, la première page est la même pour tous les utilisateurs. C’est celle de connexion.</p>
 
 <h3>Utilisateur lambda </h3>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/79797037/156945453-fc32a3ca-a637-4813-a5aa-ec4574acdc9e.PNG">
+</p>
 
 <p>Lorsqu’un utilisateur arrive sur le site, la première page à laquelle il accède est celle de connexion. En effet, un utilisateur non connecté ne doit pas avoir accès à l’annuaire de l’ENSC. Sur cette page de connexion, il est possible de s’inscrire et d’accéder à une page d’inscription. Une fois l’inscription finalisée, l’utilisateur est redirigé vers la page de connexion.</p>
 
@@ -115,7 +123,11 @@ Est_dans = (#idExp, #idSec);
 	
 <li>S’il a choisi de consulter son profil alors il peut consulter ses propres informations et peut choisir de les modifier. En plus de cela il peut s’il le désire ajouter ou supprimer une expérience.</li>
 </ul>
-	
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/79797037/156945487-398adf3a-6848-4358-81f1-a155599fb9e5.PNG">
+</p>
+
 <h3>Gestionnaire </h3>
 
 <p>Le gestionnaire passe par la même page de connexion qu’un utilisateur lambda. En se connectant, il arrive sur la même page d’accueil cependant, à la place de l’onglet mon profil dans la barre de navigation, il a accès à la liste des inscriptions à accepter.</p>
@@ -125,6 +137,10 @@ Est_dans = (#idExp, #idSec);
 <li>S’il choisit de consulter les informations d’un utilisateur, il verra l’ensemble de ses informations publiques.</li>
 <li>S’il choisit de créer un compte pour un élève, il se retrouvera sur la page de création de compte.</li>
 </ul>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/79797037/156945514-74f43d3c-30c0-4311-a259-a82c558b1a7f.PNG">
+</p>
 
 <h2>Rôle des fichiers PHP </h2>
 
