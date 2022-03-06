@@ -4,15 +4,26 @@
         
 <h2>Planning prévisionnel</h2>  
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/79797037/156944971-ca6237ac-eb59-4e0a-b5f5-cf1cc3c165c3.PNG">
+</p>
+
 <p>Afin de nous fixer des objectifs et pour notre organisation, nous avons élaboré un planning prévisionnel en nous fixant des deadline réalisables. Nous sommes donc arrivés au planning ci-dessus.</p>
         
-<h2>Planning final</h2>  
+<h2>Planning final</h2> 
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/79797037/156944990-478f9256-b815-4b62-9ee4-37f8575b93f3.PNG">
+</p>
 
 <p>Voici le planning que nous avons suivi. Nous pouvons constater des différences avec le prévisionnel. En effet, la partie MCD a été sous estimée (voir Conclusion) et l’arborescence a été défini dès le départ. La création de la BDD a été plus rapide que prévu grâce à la génération des requêtes par Looping. La partie HTML a été réalisée légèrement plus rapidement que prévu et la partie PHP a été bien prévue. Pour ce qui est de la rédaction du rapport nous constatons un décalage, car nous avons décidé de réaliser plus tôt cette étape dès lors que la partie PHP était sur sa fin.</p>
 
 <h2>Répartition des tâches</h2>
         <p>Les tâches ont été réparties de la manière suivante au sein du binôme :</p>
-
+	
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/79797037/156945024-50bb3a37-0485-4c45-b7b4-5ccd17bae6ef.PNG">
+</p>
 
 <p>De plus, afin d’avoir une meilleure organisation et une vision globale de l’avancée du projet, nous avons mis en place un trello, un outil de gestion de projet permettant à l’aide d’étiquettes, de définir l’état d’une tâche (à faire, en cours, fait, bloqué) et de définir qui doit la faire.</p>
 
